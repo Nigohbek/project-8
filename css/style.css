@@ -1,0 +1,249 @@
+@import 'fonts.css';
+
+:root {
+    --body: #fff;
+    --white:#fff;
+    --text: #323232;
+    --link: #7177F1;
+    --title: #7177F1;
+    --btn: #7177F1;
+    --dots-active: #7177F1;
+    --dots: #828282;
+    --font-Montserrat: 'Montserrat';
+    --font-Trebuchet: 'Trebuchet';
+}
+
+body {
+    background: var(--body);
+    font-family: var(--font-Montserrat);
+    color: var(--text);
+}
+
+h1,h2,h3,h4,h5,h6, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo::before {
+    content: url(../image/logo-light.svg);
+}
+
+.all-btn {
+    border: none;
+    background: var(--btn);
+    border-radius: 8px;
+    color: var(--white) !important;
+    padding: 10px 0;
+    text-align: center;
+    display: block;
+    transition: 500ms;
+    box-shadow: 0px 0px 5px 1px rgba(113, 119, 241, 0.5);
+}
+
+.all-btn:hover {
+    background: var(--white);
+    color: var(--btn) !important;
+}
+
+/* ==================== header start ==================== */
+
+.header__list {
+    column-gap: 30px;
+    row-gap: 15px;
+}
+
+.header__link {
+    color: var(--link);
+    font-size: 24px;
+    line-height: 16px;
+    text-transform: capitalize;
+    transition: 500ms;
+}
+
+.header__link:hover {
+    color: var(--text);
+}
+
+.header__link-btn {
+    width: 190px;
+}
+
+.header__menu {
+    width: 40px;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    border: 0;
+}
+
+.header__menu.collapsed {
+    background: var(--text);
+}
+
+.header__menu::before,
+.header__menu::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--text);
+    transition: 400ms;
+}
+
+.header__menu::after {
+    top: 10px;
+}
+
+.header__menu:focus {
+    box-shadow: unset;
+}
+
+.header__menu:not(.collapsed)::after {
+    top: 0;
+    transform: rotate(-405deg);
+}
+.header__menu:not(.collapsed)::before {
+    top: 0;
+    transform: rotate(405deg);
+}
+
+/* ==================== header___content start ===================== */
+
+.header__content {
+    padding: 42px 0 71px;
+}
+
+.header__content-subtitle{
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.header__content-title {
+    line-height: 50px;
+    margin-bottom: 25px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: var(--title);
+}
+
+.header__content-btn {
+    width: 299px;
+    margin: 0 auto 50px;
+}
+
+.header__tech-content  {
+    color: #E44F26;
+}
+
+.header__tech-content:nth-of-type(2) {
+    color: #1572B6;
+}
+
+.header__tech-content:nth-of-type(3) {
+    color: #790FF1;
+}
+
+.header__tech-name {
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: var(--title);
+}
+
+.header__carousel-indicators {
+    position: static;
+    margin: 50px 0 0;
+}
+
+.header__carousel-dots {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50%;
+    border: 0 !important;
+    opacity: 1 !important;
+    background: var(--dots) !important;
+}
+
+.header__carousel-dots.active {
+    background: var(--dots-active) !important;
+}
+
+.header__carousel-img {
+    height: 500px;
+}
+
+/* ==================== section about ==================== */
+
+#about {
+    margin-bottom: 80px;
+}
+
+.about__work {
+    width: 140px;
+    background: var(--white);
+    color: var(--text) !important;
+    position: relative;
+    left: -38px;
+    top: 40px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.about__ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0FDAC2;
+    position: absolute;
+    left: 118px;
+    top: -17px;
+}
+
+.about__end {
+    background: #151437;
+    box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+    border-radius: 8px;
+    padding: 34px 30px 26px;
+}
+
+.about__end-title {
+    margin-bottom: 20px;
+}
+
+.about__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.about__end-text {
+    margin-bottom: 30px;
+}
+
+.about__end-btn {
+    font-size: 18px;
+    width: 190px;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+}
