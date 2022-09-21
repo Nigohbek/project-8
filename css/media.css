@@ -1,13 +1,26 @@
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light ) {
     :root {
         --body: #151437;
         --text: #fff;
         --dots: #828282;
+        --footer-link: #fff;
     }
     .logo::before {
         content: url(../image/logo-dark.svg);
     }
     .about__work {
         background: #7177F1;
+    }
+}
+
+@media screen and (max-widht: 1200px;) {
+    #about {
+        display: none;
+    }
+}
+
+@media screen and (max-widht: 870px;) {
+    #works::before {
+        display: none;
     }
 }
